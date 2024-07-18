@@ -45,8 +45,8 @@ async function postData (path="", data={}) {
  * @returns 
  */
 async function getStorageData (key) {
-    const url = `${STORAGE_URL}?key=${key}&token=${STORAGE_TOKEN}`;
-    let package = await fetch(url).then(res => res.json()).then(res => {
+    //const url = `${STORAGE_URL}?key=${key}&token=${STORAGE_TOKEN}`;
+    let package = await fetch(BASE_URL + ".json").then(res => res.json()).then(res => {
         if (res.data) { 
             return res.data.value;
         } throw `Could not find data with key "${key}".`;
