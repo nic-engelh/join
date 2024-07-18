@@ -80,14 +80,14 @@ function popup() {
  * leads you to login html
  */
 function openLogin() {
-     window.location.href = './components/login/login.html';
+     window.location.href = './login.html';
 }
 
 /**
  * /from register back to login html
  */
 function back() {
-     window.location.href = './components/login/login.html';
+     window.location.href = './login.html';
 }
 
 /**
@@ -100,13 +100,13 @@ function passwordVisibleRegister() {//changes the lock img and the passwort visi
      if (password.type == 'password') {
           password.type = 'text';
           passwordConfirm.type = 'text';
-          password.style.backgroundImage = "url('./assets/img/—Pngtree—cartoon unlock icon_4438287.png')";
-          passwordConfirm.style.backgroundImage = "url('./assets/img/—Pngtree—cartoon unlock icon_4438287.png')";
+          password.style.backgroundImage = "url('https://www.niklas-engelhardt.de/join/assets/img/—Pngtree—cartoon unlock icon_4438287.png')";
+          passwordConfirm.style.backgroundImage = "url('https://www.niklas-engelhardt.de/join/assets/img/—Pngtree—cartoon unlock icon_4438287.png')";
      } else {
           password.type = 'password';
           passwordConfirm.type = 'password';
-          password.style.backgroundImage = "url('./assets/img/lock.jpg')";
-          passwordConfirm.style.backgroundImage = "url('./assets/img/lock.jpg')";
+          password.style.backgroundImage = "url('https://www.niklas-engelhardt.de/join/assets/img/lock.jpg')";
+          passwordConfirm.style.backgroundImage = "url('https://www.niklas-engelhardt.de/join/assets/img/lock.jpg')";
      }
 }
 
