@@ -40,7 +40,7 @@ async function login() {
                     ACTIVEUSERKEY = key;
                     setLocalStorage("activeUser", ACTIVEUSERKEY);
                     loadingScreen();
-                    window.location.href = '/index.html';
+                    window.location.href = './index.html';
                } else {
                    TimePassedData(key,message)
                }
@@ -146,7 +146,7 @@ function checkPasswordLogin(password) {
  * from login to register html
  */
 function signUp() {
-     window.location.href = '/components/login/register.html';
+     window.location.href = './components/login/register.html';
 }
 
 /**
@@ -156,10 +156,10 @@ function passwordVisible() {
      let password = document.getElementById('password');
      if (password.type == 'password') {
           password.type = 'text';
-          password.style.backgroundImage = "url('/assets/img/—Pngtree—cartoon unlock icon_4438287.png')";
+          password.style.backgroundImage = "url('./assets/img/—Pngtree—cartoon unlock icon_4438287.png')";
      } else {
           password.type = 'password';
-          password.style.backgroundImage = "url('/assets/img/lock.jpg')";
+          password.style.backgroundImage = "url('./assets/img/lock.jpg')";
      }
 }
 
@@ -210,5 +210,5 @@ async function guestLogin() {
      ACTIVEUSERKEY = "guest";
      await setLocalStorage("activeUser", ACTIVEUSERKEY);
      loadingScreen();
-     window.location.href = '/index.html';
+     window.location.href = './index.html';
 }
