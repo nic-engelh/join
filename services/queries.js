@@ -1,6 +1,43 @@
 const STORAGE_URL = 'https://remote-storage.developerakademie.org/item';
 const STORAGE_TOKEN = 'LMBAS4F9WBPBDZFK8259KHJQX6G2KD62SQOU7VKS';
 
+const BASE_URL = "https://join-25d10-default-rtdb.europe-west1.firebasedatabase.app/"
+
+async function loadData() {
+   let response = await fetch(BASE_URL + ".json");
+   let responseToJson = await response.json();
+}
+
+
+async function postData (path="", data={}) {
+    let response = await fetch(BASE_URL + path + ".json", {
+        method: "POST",
+        header:{
+            "Content-Type": "application/json",
+        },
+        body:JSON.stringify(data),
+    })
+}
+
+async function deleteData (path="") {
+    let response = await fetch(BASE_URL + path + ".json", {
+        method: "DELETE",
+    });
+    return responseToJson = await response.json();
+}
+
+async function postData (path="", data={}) {
+    let response = await fetch(BASE_URL + path + ".json", {
+        method: "PUT",
+        header:{
+            "Content-Type": "application/json",
+        },
+        body:JSON.stringify(data),
+    });
+    return response.json();
+}
+
+
 /**
  * The function gets the JSON data from the backend storage.
  * 
