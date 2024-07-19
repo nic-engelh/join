@@ -5,15 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Join Add Task</title>
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="stylesheet" href="/components/tasks/tasksMediaQuery.css" />
-  <link rel="stylesheet" href="/components/tasks/tasks.css" />
-  <link rel="stylesheet" href="/components/templates/header/header.css" />
-  <link rel="stylesheet" href="/components/templates/footer/footer.css" />
-  <script src="/script.js"></script>
-  <script src="/components/tasks/tasks.js"></script>
-  <script src="/services/utils.js"></script>
-  <link rel="icon" href="/assets/img/favicon-join.png">
+  <link rel="stylesheet" href="https://www.niklas-engelhardt.de/join/style.css" />
+  <link rel="stylesheet" href="https://www.niklas-engelhardt.de/join/components/tasks/tasksMediaQuery.css" />
+  <link rel="stylesheet" href="https://www.niklas-engelhardt.de/join/components/tasks/tasks.css" />
+  <link rel="stylesheet" href="https://www.niklas-engelhardt.de/join/components/templates/header/header.css" />
+  <link rel="stylesheet" href="https://www.niklas-engelhardt.de/join/components/templates/footer/footer.css" />
+  <script src="https://www.niklas-engelhardt.de/join/script.js"></script>
+  <script src="https://www.niklas-engelhardt.de/join/components/tasks/tasks.js"></script>
+  <script src="https://www.niklas-engelhardt.de/join/services/utils.js"></script>
+  <link rel="icon" href="https://www.niklas-engelhardt.de/join/assets/img/favicon-join.png">
 </head>
 
 <body onload="includeHTML(); loadAssignableNames()">
@@ -42,13 +42,13 @@
       <span>Prio</span>
       <div class="add_task_priorities">
         <button class="add_task_urgent_button add_task_input_button" id="urgent_button" onclick="urgentButton()">Urgent
-          <img id="task_prio_img_urgent" src="/assets/img/addTask/prio_high.png" alt="">
+          <img id="task_prio_img_urgent" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_high.png" alt="">
         </button>
         <button class="add_task_medium_button add_task_input_button medium_button_active" id="medium_button" onclick="mediumButton()">Medium
-          <img id="task_prio_img_medium" src="/assets/img/addTask/prio_medium.png" alt="">
+          <img id="task_prio_img_medium" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_medium.png" alt="">
         </button>
         <button class="add_task_low_button add_task_input_button" id="low_button" onclick="lowButton()">Low
-          <img id="task_prio_img_low" src="/assets/img/addTask/prio_low.png" alt="">
+          <img id="task_prio_img_low" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_low.png" alt="">
         </button>
       </div>
     </div>
@@ -85,7 +85,7 @@
     <div class="form_categories_subtask">
       <span>Subtasks</span>
       <div id="subtask_button_input" >
-        <button class="add_task_inputs" id="task_subtask_button" onclick="transformSubtaskButton()" type="text"><span>Add new Subtask</span><img src="/assets/img/addTask/add_subtask.png" alt=""></button>
+        <button class="add_task_inputs" id="task_subtask_button" onclick="transformSubtaskButton()" type="text"><span>Add new Subtask</span><img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/add_subtask.png" alt=""></button>
       </div>
       <ul id="new_subtask_list" style="list-style-type:disc"></ul>
     </div>
@@ -93,14 +93,14 @@
 
     <div class="create_task_finish">
       <span><span class="add_task_required">*</span>This field is required</span>
-      <button id="reset_task_button" value="Reset Task " onclick="resetTask()"><span>Clear</span><img src="/assets/img/addTask/delete.png" alt=""></button>
-      <button id="create_task_button" value="Create Task " onclick="formValidation()"><span>Create Task</span><img src="/assets/img/addTask/check_icon.png" alt=""></button>
+      <button id="reset_task_button" value="Reset Task " onclick="resetTask()"><span>Clear</span><img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/delete.png" alt=""></button>
+      <button id="create_task_button" value="Create Task " onclick="formValidation()"><span>Create Task</span><img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/check_icon.png" alt=""></button>
     </div>
 
   
   <dialog>
     <span>Task added to board</span>
-    <img src="/assets/img/addTask/board_icon.png" alt="board icon">
+    <img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/board_icon.png" alt="board icon">
   </dialog>
 </body>
 

@@ -86,11 +86,11 @@ function resetTask() {
     document.getElementById('task_date').style.border = '1px solid #d1d1d1';;
     document.getElementById('date_is_required').classList.add('d-none');
     document.getElementById('urgent_button').classList.remove('urgent_button_active');
-    document.getElementById('task_prio_img_urgent').src = '/assets/img/addTask/prio_high.png';
+    document.getElementById('task_prio_img_urgent').src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_high.png';
     document.getElementById('medium_button').classList.add('medium_button_active');
-    document.getElementById('task_prio_img_medium').src = '/assets/img/addTask/Medium_nocolor.png';
+    document.getElementById('task_prio_img_medium').src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/Medium_nocolor.png';
     document.getElementById('low_button').classList.remove('low_button_active');
-    document.getElementById('task_prio_img_low').src = '/assets/img/addTask/prio_low.png';
+    document.getElementById('task_prio_img_low').src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_low.png';
     document.getElementById('task_category').value = '';
     document.getElementById('task_category').style.border = '1px solid #d1d1d1';;
     document.getElementById('category_is_required').classList.add('d-none');
@@ -101,7 +101,7 @@ function resetTask() {
     assignedInitial = [];
     const checkboxes = document.getElementsByClassName('checkbox');
     for (let i = 0; i < checkboxes.length; i++) {
-        checkboxes[i].src = '/assets/img/addTask/check_empty.png';
+        checkboxes[i].src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/check_empty.png';
     }
     const assignedNameLI = document.getElementsByClassName('assigned_user_li');
     for (let i = 0; i < assignedNameLI.length; i++) {
@@ -160,9 +160,9 @@ function setPriority(buttonId, imgId, activeClass, inactiveImgSrc, activeImgSrc,
  * 
  */
 function urgentButton() {
-    setPriority('urgent_button', 'task_prio_img_urgent', 'urgent_button_active', '/assets/img/addTask/prio_high.png', '/assets/img/addTask/high_nocolor.png', [
-        { img: 'task_prio_img_medium', src: '/assets/img/addTask/prio_medium.png', button: 'medium_button', activeClass: 'medium_button_active' },
-        { img: 'task_prio_img_low', src: '/assets/img/addTask/prio_low.png', button: 'low_button', activeClass: 'low_button_active' }
+    setPriority('urgent_button', 'task_prio_img_urgent', 'urgent_button_active', 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_high.png', 'https://www.niklas-engelhardt.de/join/assets/img/addTask/high_nocolor.png', [
+        { img: 'task_prio_img_medium', src: 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_medium.png', button: 'medium_button', activeClass: 'medium_button_active' },
+        { img: 'task_prio_img_low', src: 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_low.png', button: 'low_button', activeClass: 'low_button_active' }
     ]);
 }
 
@@ -172,9 +172,9 @@ function urgentButton() {
  * 
  */
 function mediumButton() {
-    setPriority('medium_button', 'task_prio_img_medium', 'medium_button_active', '/assets/img/addTask/prio_medium.png', '/assets/img/addTask/Medium_nocolor.png', [
-        { img: 'task_prio_img_urgent', src: '/assets/img/addTask/prio_high.png', button: 'urgent_button', activeClass: 'urgent_button_active' },
-        { img: 'task_prio_img_low', src: '/assets/img/addTask/prio_low.png', button: 'low_button', activeClass: 'low_button_active' }
+    setPriority('medium_button', 'task_prio_img_medium', 'medium_button_active', 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_medium.png', 'https://www.niklas-engelhardt.de/join/assets/img/addTask/Medium_nocolor.png', [
+        { img: 'task_prio_img_urgent', src: 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_high.png', button: 'urgent_button', activeClass: 'urgent_button_active' },
+        { img: 'task_prio_img_low', src: 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_low.png', button: 'low_button', activeClass: 'low_button_active' }
     ]);
 }
 
@@ -184,9 +184,9 @@ function mediumButton() {
  * 
  */
 function lowButton() {
-    setPriority('low_button', 'task_prio_img_low', 'low_button_active', '/assets/img/addTask/prio_low.png', '/assets/img/addTask/low_nocolor.png', [
-        { img: 'task_prio_img_urgent', src: '/assets/img/addTask/prio_high.png', button: 'urgent_button', activeClass: 'urgent_button_active' },
-        { img: 'task_prio_img_medium', src: '/assets/img/addTask/prio_medium.png', button: 'medium_button', activeClass: 'medium_button_active' }
+    setPriority('low_button', 'task_prio_img_low', 'low_button_active', 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_low.png', 'https://www.niklas-engelhardt.de/join/assets/img/addTask/low_nocolor.png', [
+        { img: 'task_prio_img_urgent', src: 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_high.png', button: 'urgent_button', activeClass: 'urgent_button_active' },
+        { img: 'task_prio_img_medium', src: 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_medium.png', button: 'medium_button', activeClass: 'medium_button_active' }
     ]);
 }
 
@@ -202,9 +202,9 @@ function transformSubtaskButton() {
     <div class="add_task_inputs">
         <input onkeyup="handleKeyUp(event)" id="subtask_input" class="subtask_input" placeholder="Add new Subtask">
         <div class="delete_and_check">
-            <img onclick="revertBackToButton()" class="exit" id="exit" src="/assets/img/addTask/subtask_delete.png">
-            <img src="/assets/img/addTask/subtask_divide.png">
-            <img onclick="addNewSubtaskToList()" class="tick" id="tick" src="/assets/img/addTask/subtask_check.png">
+            <img onclick="revertBackToButton()" class="exit" id="exit" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_delete.png">
+            <img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_divide.png">
+            <img onclick="addNewSubtaskToList()" class="tick" id="tick" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_check.png">
         </div>
     </div>
     `;
@@ -267,9 +267,9 @@ function renderSubtaskContainer() {
             <input readonly id="readonly_input${i}" value="${addedTask}"
                 class="input_edit_subtask"></input>
             <div id="edit_and_delete${i}" class="edit_and_delete">
-                <img id="edit${i}" onclick="editSubtask(${i})" src="/assets/img/addTask/edit.png">
+                <img id="edit${i}" onclick="editSubtask(${i})" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/edit.png">
                 <img src="/assets/img/addTask/subtask_divide.png">
-                <img id="delete${i}" onclick="deleteSubtaskItem(${i})" class="delete" src="/assets/img/addTask/delete.png"
+                <img id="delete${i}" onclick="deleteSubtaskItem(${i})" class="delete" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/delete.png"
             </div>
         </div>
     </li>`;
@@ -286,10 +286,10 @@ function editSubtask(i) {
     const editIcons = document.getElementById(`edit_and_delete${i}`);
     editIcons.innerHTML = "";
     editIcons.innerHTML = `
-        <img id="delete${i}" onclick="deleteSubtaskItem(${i})" class="delete" src="/assets/img/addTask/delete.png"
-        <img src="/assets/img/addTask/subtask_divide.png">
-        <img src="/assets/img/addTask/subtask_divide.png">
-        <img onclick="acceptChanges(${i})" src="/assets/img/addTask/subtask_check.png">
+        <img id="delete${i}" onclick="deleteSubtaskItem(${i})" class="delete" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/delete.png"
+        <img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_divide.png">
+        <img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_divide.png">
+        <img onclick="acceptChanges(${i})" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_check.png">
     `;
     const changeBackground = document.getElementById('new_subtask_list')
     changeBackground.classList.add('edit_subtask_list');
@@ -339,7 +339,7 @@ function revertBackToButton() {
     subtaskButton.innerHTML = `
     <button class="add_task_inputs" id="task_subtask_button" onclick="transformSubtaskButton()" type="text">
     <span>Add new Subtask</span>
-    <img src="/assets/img/addTask/add_subtask.png" alt=""></button>
+    <img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/add_subtask.png" alt=""></button>
     `;
 }
 
@@ -404,7 +404,7 @@ function loadAssignableNames() {
                     <div id="initials_img${id}" class="assigned_initials" style="background-color:#${color};">${initial}</div>
                     <span id="assigned_name_span">${name}</span>
                 </div>
-                <img class="checkbox" id="checkbox${id}" src="/assets/img/addTask/check_empty.png">
+                <img class="checkbox" id="checkbox${id}" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/check_empty.png">
             </li>`;
     }
 }
@@ -420,10 +420,10 @@ function chooseContact(i, id) {
 
     li.classList.toggle('assigned_user_li_toggled');
 
-    if (checkbox.src.endsWith('/assets/img/addTask/check_empty.png')) {
-        checkbox.src = '/assets/img/addTask/check_checked.png';
+    if (checkbox.src.endsWith('https://www.niklas-engelhardt.de/join/assets/img/addTask/check_empty.png')) {
+        checkbox.src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/check_checked.png';
     } else {
-        checkbox.src = '/assets/img/addTask/check_empty.png';
+        checkbox.src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/check_empty.png';
     }
 
     pushAssignedContact(i, id, li);
