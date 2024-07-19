@@ -19,7 +19,7 @@ body {
 }
 
 .name {
-    background-image: url(/assets/img/person.png);
+    background-image: url(https://www.niklas-engelhardt.de/join/assets/img/person.png);
     background-repeat: no-repeat;
     background-position: 95%;
     width: 100%;
@@ -31,7 +31,7 @@ body {
 }
 
 .mail {
-    background-image: url(/assets/img/mail.jpg);
+    background-image: url(https://www.niklas-engelhardt.de/join/assets/img/person.png);
     background-repeat: no-repeat;
     background-position: 95%;
     width: 100%;
@@ -50,7 +50,7 @@ body {
 }
 
 .hide {
-    background-image: url(/assets/img/lock.jpg);
+    background-image: url(https://www.niklas-engelhardt.de/join/assets/img/person.png);
     background-position: center;
     background-size: 24px ,24px;
     background-repeat: no-repeat;
