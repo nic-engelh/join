@@ -39,10 +39,10 @@ async function loadBoardModal(id, title, description, date, category) {
                 <span class="task_category_font">Edit</span>
         </div>`;
     document.getElementById("subtask_button_input_modal").innerHTML = `
-    <button class="add_task_inputs_modal" id="task_subtask_button_modal" onclick="transformSubtaskButtonModal('${id}')" type="text"><span>Add new Subtask</span><img src="/assets/img/addTask/add_subtask.png" alt=""></button>
+    <button class="add_task_inputs_modal" id="task_subtask_button_modal" onclick="transformSubtaskButtonModal('${id}')" type="text"><span>Add new Subtask</span><img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/add_subtask.png" alt=""></button>
     `;
     document.getElementById("modal_edit_task_finish").innerHTML = `
-    <button id="create_task_button" value="Create Task " onclick="formValidationModal('${id}')"><span>OK</span><img src="/assets/img/addTask/check_icon.png" alt=""></button>
+    <button id="create_task_button" value="Create Task " onclick="formValidationModal('${id}')"><span>OK</span><img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/check_icon.png" alt=""></button>
     `;
 }
 
@@ -51,17 +51,17 @@ async function loadBoardModalPrio(prio) {
     let prioImg = document.getElementById("board_modal_prio_img")
     if (prio == "urgent") {
         prioSpan.innerHTML = "Urgent";
-        prioImg.innerHTML = `<img src="/assets/img/board/prio_high.png" alt="Prio High">`;
+        prioImg.innerHTML = `<img src="https://www.niklas-engelhardt.de/join/assets/img/board/prio_high.png" alt="Prio High">`;
     }
 
     if (prio == "medium") {
         prioSpan.innerHTML = "Medium";
-        prioImg.innerHTML = `<img src="/assets/img/board/prio_medium.png" alt="Prio Medium">`;
+        prioImg.innerHTML = `<img src="https://www.niklas-engelhardt.de/join/assets/img/board/prio_medium.png" alt="Prio Medium">`;
     }
 
     if (prio == "low") {
         prioSpan.innerHTML = "Low";
-        prioImg.innerHTML = `<img src="/assets/img/board/prio_low.png" alt="Prio Low">`;
+        prioImg.innerHTML = `<img src="https://www.niklas-engelhardt.de/join/assets/img/board/prio_low.png" alt="Prio Low">`;
     }
 }
 
@@ -73,13 +73,13 @@ async function loadBoardModalSubtasks(subtasks, id) {
             if (USERS[ACTIVEUSERKEY].tasks[id].subtasks.subtaskStatus[i] != 1) {
                 subtaskContainer.innerHTML += `
             <div class="task_card_subtask">
-            <img id="board_modal_subtask_status_${i}" onclick="finishSubtasks('${id}', ${i})" src="/assets/img/board/check_empty.png" alt="checkbox empty">
+            <img id="board_modal_subtask_status_${i}" onclick="finishSubtasks('${id}', ${i})" src="https://www.niklas-engelhardt.de/join/assets/img/board/check_empty.png" alt="checkbox empty">
             <span>${subtasks[i]}</span>
           </div>`;
             } else if (USERS[ACTIVEUSERKEY].tasks[id].subtasks.subtaskStatus[i] == 1){
                 subtaskContainer.innerHTML += `
             <div class="task_card_subtask">
-            <img id="board_modal_subtask_status_${i}" class="board_modal_subtask_status_img" onclick="finishSubtasks('${id}', ${i})" src="/assets/img/board/check_checked.png" alt="checkbox empty">
+            <img id="board_modal_subtask_status_${i}" class="board_modal_subtask_status_img" onclick="finishSubtasks('${id}', ${i})" src="https://www.niklas-engelhardt.de/join/assets/img/board/check_checked.png" alt="checkbox empty">
             <span>${subtasks[i]}</span>
           </div>`;
             }
@@ -272,13 +272,13 @@ function editTaskLoadUsers() {
                     <div id="modal_initials_img${userID}" class="assigned_initials" style="background-color:#${color};">${initial}</div>
                     <span id="assigned_name_span">${name}</span>
                 </div>
-                <img class="checkbox" id="checkboxModal${userID}" src="/assets/img/addTask/check_empty.png">
+                <img class="checkbox" id="checkboxModal${userID}" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/check_empty.png">
             </li>`;
             for (let j = 0; j < editTaskBuffer.length; j++){
                 const taskUserID = editTaskBuffer[j]["contactId"];
                 if (taskUserID == userID ){
                     document.getElementById(`toggle_name_modal${userID}`).classList.add('assigned_user_li_toggled')
-                    document.getElementById(`checkboxModal${userID}`).src = '/assets/img/addTask/check_checked.png';
+                    document.getElementById(`checkboxModal${userID}`).src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/check_checked.png';
                 }
             }
         }
@@ -316,14 +316,14 @@ function chooseContactModal(i, id) {
     li.classList.toggle('assigned_user_li_toggled');
 
     if (checkbox.src.endsWith('/assets/img/addTask/check_empty.png')) {
-        checkbox.src = '/assets/img/addTask/check_checked.png';
+        checkbox.src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/check_checked.png';
         const userAlreadyInBuffer = editTaskBuffer.some(user => user.contactId === id);
 
         if (!userAlreadyInBuffer) {
             editTaskBuffer.push(checkedUser);
         }
     } else {
-        checkbox.src = '/assets/img/addTask/check_empty.png';
+        checkbox.src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/check_empty.png';
         editTaskBuffer = editTaskBuffer.filter(user => user.contactId !== id);
     }
     modalEditTaskAddInitials()
@@ -361,9 +361,9 @@ function modalTaskPrioUrgent(urgentButton, mediumButton, lowButton, urgentImage,
     urgentButton.classList.add('urgent_button_active');
     mediumButton.classList.remove('medium_button_active');
     lowButton.classList.remove('low_button_active');
-    urgentImage.src = '/assets/img/addTask/high_nocolor.png';
-    mediumImage.src = '/assets/img/addTask/prio_medium.png';
-    lowImage.src = '/assets/img/addTask/prio_low.png';
+    urgentImage.src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/high_nocolor.png';
+    mediumImage.src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_medium.png';
+    lowImage.src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_low.png';
 }
 
 /**
@@ -375,9 +375,9 @@ function modalTaskPrioMedium(urgentButton, mediumButton, lowButton, urgentImage,
     mediumButton.classList.add('medium_button_active');
     urgentButton.classList.remove('urgent_button_active');
     lowButton.classList.remove('low_button_active');
-    urgentImage.src = '/assets/img/addTask/prio_high.png';
-    mediumImage.src = '/assets/img/addTask/Medium_nocolor.png';
-    lowImage.src = '/assets/img/addTask/prio_low.png';
+    urgentImage.src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_high.png';
+    mediumImage.src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/Medium_nocolor.png';
+    lowImage.src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_low.png';
 }
 
 /**
@@ -389,9 +389,9 @@ function modalTaskPrioLow(urgentButton, mediumButton, lowButton, urgentImage, me
     lowButton.classList.add('low_button_active');
     urgentButton.classList.remove('urgent_button_active');
     mediumButton.classList.remove('medium_button_active');
-    urgentImage.src = '/assets/img/addTask/prio_high.png';
-    mediumImage.src = '/assets/img/addTask/prio_medium.png';
-    lowImage.src = '/assets/img/addTask/low_nocolor.png';
+    urgentImage.src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_high.png';
+    mediumImage.src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_medium.png';
+    lowImage.src = 'https://www.niklas-engelhardt.de/join/assets/img/addTask/low_nocolor.png';
 }
 
 /**
@@ -419,9 +419,9 @@ function getPriorityModal() {
  * 
  */
 function urgentButtonModal() {
-    setPriority('urgent_button_modal', 'task_prio_img_urgent_modal', 'urgent_button_active', '/assets/img/addTask/prio_high.png', '/assets/img/addTask/high_nocolor.png', [
-        { img: 'task_prio_img_medium_modal', src: '/assets/img/addTask/prio_medium.png', button: 'medium_button_modal', activeClass: 'medium_button_active' },
-        { img: 'task_prio_img_low_modal', src: '/assets/img/addTask/prio_low.png', button: 'low_button_modal', activeClass: 'low_button_active' }
+    setPriority('urgent_button_modal', 'task_prio_img_urgent_modal', 'urgent_button_active', 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_high.png', 'https://www.niklas-engelhardt.de/join/assets/img/addTask/high_nocolor.png', [
+        { img: 'task_prio_img_medium_modal', src: 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_medium.png', button: 'medium_button_modal', activeClass: 'medium_button_active' },
+        { img: 'task_prio_img_low_modal', src: 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_low.png', button: 'low_button_modal', activeClass: 'low_button_active' }
     ]);
 }
 
@@ -431,9 +431,9 @@ function urgentButtonModal() {
  * 
  */
 function mediumButtonModal() {
-    setPriority('medium_button_modal', 'task_prio_img_medium_modal', 'medium_button_active', '/assets/img/addTask/prio_medium.png', '/assets/img/addTask/Medium_nocolor.png', [
-        { img: 'task_prio_img_urgent_modal', src: '/assets/img/addTask/prio_high.png', button: 'urgent_button_modal', activeClass: 'urgent_button_active' },
-        { img: 'task_prio_img_low_modal', src: '/assets/img/addTask/prio_low.png', button: 'low_button_modal', activeClass: 'low_button_active' }
+    setPriority('medium_button_modal', 'task_prio_img_medium_modal', 'medium_button_active', 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_medium.png', 'https://www.niklas-engelhardt.de/join/assets/img/addTask/Medium_nocolor.png', [
+        { img: 'task_prio_img_urgent_modal', src: 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_high.png', button: 'urgent_button_modal', activeClass: 'urgent_button_active' },
+        { img: 'task_prio_img_low_modal', src: 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_low.png', button: 'low_button_modal', activeClass: 'low_button_active' }
     ]);
 }
 
@@ -443,8 +443,8 @@ function mediumButtonModal() {
  * 
  */
 function lowButtonModal() {
-    setPriority('low_button_modal', 'task_prio_img_low_modal', 'low_button_active', '/assets/img/addTask/prio_low.png', '/assets/img/addTask/low_nocolor.png', [
-        { img: 'task_prio_img_urgent_modal', src: '/assets/img/addTask/prio_high.png', button: 'urgent_button_modal', activeClass: 'urgent_button_active' },
-        { img: 'task_prio_img_medium_modal', src: '/assets/img/addTask/prio_medium.png', button: 'medium_button_modal', activeClass: 'medium_button_active' }
+    setPriority('low_button_modal', 'task_prio_img_low_modal', 'low_button_active', 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_low.png', 'https://www.niklas-engelhardt.de/join/assets/img/addTask/low_nocolor.png', [
+        { img: 'task_prio_img_urgent_modal', src: 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_high.png', button: 'urgent_button_modal', activeClass: 'urgent_button_active' },
+        { img: 'task_prio_img_medium_modal', src: 'https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_medium.png', button: 'medium_button_modal', activeClass: 'medium_button_active' }
     ]);
 }

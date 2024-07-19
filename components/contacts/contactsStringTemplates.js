@@ -79,7 +79,7 @@ function createContactViewProfilHTML (contactInitials, contactName, contactEmail
             </div>
             
             <div id="contact-arrow-box" class="pointer" onclick="toggleHide('contact-view-mobile'); renderContactList(); removeElemente('contact-view-profil-main');">
-                <img src="/assets/img/contacts/arrow-left-line.svg" alt="Arrow left">
+                <img src="https://www.niklas-engelhardt.de/join/assets/img/contacts/arrow-left-line.svg" alt="Arrow left">
             </div>
         </section>
         <section id="contact-view-middle-section" class="d-flex flex-column g-21 ms-16">
@@ -99,7 +99,7 @@ function createContactViewProfilHTML (contactInitials, contactName, contactEmail
     </section>
     <section id="contact-view-bottom-section" class="d-flex flex-end grow-1 px-16">
         <div id="menu-contact-options" onclick="showContactProfilOptions();">
-            <img src="/assets/img/contacts/more_vert.svg" alt="Options">
+            <img src="https://www.niklas-engelhardt.de/join/assets/img/contacts/more_vert.svg" alt="Options">
         </div>
     </section>
     `
@@ -111,13 +111,13 @@ function createContactOptionsHTML (activeContact) {
     <div class="d-flex flex-column flex-start">
         <div id="contact-opitons-edit" class="d-flex flex-row justify-content-center g-8  pointer" onclick="showDialog('overlay-edit-contact-mobile'); hideDialog('contact-options-modal');loadEditContactData()";">
             <div class="symbol-frame">
-                <img src="/assets/img/contacts/edit.svg" alt="Editieren">
+                <img src="https://www.niklas-engelhardt.de/join/assets/img/contacts/edit.svg" alt="Editieren">
             </div>
             <span class="fw-4 fs-1">Edit</span>
         </div>
         <div id="contact-options-delete" class="d-flex flex-row justify-content-center g-8 pointer" onclick="deleteContact('${activeContact}', true); hideDialog('contact-options-modal');">
             <div class="symbol-frame">
-                <img src="/assets/img/contacts/delete.svg" alt="Löschen">
+                <img src="https://www.niklas-engelhardt.de/join/assets/img/contacts/delete.svg" alt="Löschen">
             </div>
             <span class="fw-4 fs-1">Delete</span>
         </div>
@@ -131,7 +131,7 @@ function createContactAddButtonDesktopHTML () {
     return /*html*/`
         <div id="desktop-contact-list-add-button-box">
             <div id="desktop-contact-list-add-button" onclick="showDialog('overlay-add-contact-desktop');" class="btn-hover-blue-fill">
-                    <b>Add new contact</b> <img src="/assets/img/contacts/person_add.svg" alt="add person button">
+                    <b>Add new contact</b> <img src="https://www.niklas-engelhardt.de/join/assets/img/contacts/person_add.svg" alt="add person button">
             </div>
         </div>
         
@@ -150,13 +150,13 @@ function createContactProfilViewDesktopHTML (contactInitials, contactName, conta
                         <div id="contact-view-options-container">
                             <div id="contact-opitons-edit" class="d-flex flex-row justify-content-center g-8  pointer" onclick="showDialog('overlay-edit-contact-desktop'); loadEditContactData()";">
                                 <div class="symbol-frame">
-                                    <img src="/assets/img/contacts/edit.svg" alt="Editieren">
+                                    <img src="https://www.niklas-engelhardt.de/join/assets/img/contacts/edit.svg" alt="Editieren">
                                 </div>
                                 <span class="fw-4 fs-1">Edit</span>
                                 </div>
                             <div id="contact-options-delete" class="d-flex flex-row justify-content-center g-8 pointer" onclick="deleteContact('${activeContact}', true); deleteContactProfilView();">
                                 <div class="symbol-frame">
-                                <img src="/assets/img/contacts/delete.svg" alt="Löschen">
+                                <img src="https://www.niklas-engelhardt.de/join/assets/img/contacts/delete.svg" alt="Löschen">
                                 </div>
                                 <span class="fw-4 fs-1">Delete</span>
                             </div>

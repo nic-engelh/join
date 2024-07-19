@@ -16,7 +16,7 @@
 
 .j36_toDo:hover {
     background-color: #2a3647;
-    background-image: url("/assets/img/Group 7 _hover.svg");
+    background-image: url("https://www.niklas-engelhardt.de/join/assets/img/Group 7 _hover.svg");
     background-repeat: no-repeat;
     background-position: 20% 50%;
     cursor: pointer;
@@ -147,7 +147,7 @@ h1 {
     font-style: normal;
     font-weight: 600;
     text-align: center;
-    background-image: url("/assets/img/Group 7.svg");
+    background-image: url("https://www.niklas-engelhardt.de/join/assets/img/Group 7.svg");
     background-repeat: no-repeat;
     background-position: 20% 50%;
     background-size: 63px;
@@ -189,7 +189,7 @@ h1 {
     font-style: normal;
     font-weight: 600;
     text-align: center;
-    background-image: url("/assets/img/Group\ 7\ \(1\).svg");
+    background-image: url("https://www.niklas-engelhardt.de/join/components/assets/img/Group\ 7\ \(1\).svg");
     background-repeat: no-repeat;
     background-position: 20% 50%;
     background-size: 63px;
@@ -225,7 +225,7 @@ h1 {
     font-weight: 600;
     padding-left: 30px;
     gap: 30px;
-    background-image: url("/assets/img/Ellipse 4 (1).svg");
+    background-image: url("https://www.niklas-engelhardt.de/join/components/assets/img/Ellipse 4 (1).svg");
     background-repeat: no-repeat;
     background-position: 5% 50%;
     background-size: 63px;
@@ -316,7 +316,7 @@ h1 {
 
 .j36_toDoDone:hover {
     cursor: pointer;
-    background-image: url("/assets/img/Group 7 (1) copy.svg");
+    background-image: url("https://www.niklas-engelhardt.de/join/components/assets/img/Group 7 (1) copy.svg");
     background-repeat: no-repeat;
     background-position: 20% 50%;
 }

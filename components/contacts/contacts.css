@@ -257,7 +257,7 @@ fw-bold {
 }
 
 .contact-input-name {
-    background-image: url('/assets/img/contacts/person-contact-input.svg');
+    background-image: url('https://www.niklas-engelhardt.de/join/assets/img/contacts/person-contact-input.svg');
     background-position: 90%;
     background-repeat: no-repeat;
     background-size: 24px;
@@ -265,7 +265,7 @@ fw-bold {
 }
 
 .contact-input-email {
-    background-image: url('/assets/img/contacts/mail-contact-input.png');
+    background-image: url('https://www.niklas-engelhardt.de/join/assets/img/contacts/mail-contact-input.png');
     background-position: 90%;
     background-repeat: no-repeat;
     background-size: 24px;
@@ -273,7 +273,7 @@ fw-bold {
 }
 
 .contact-input-phone {
-    background-image: url('/assets/img/contacts/call-contact-input.svg');
+    background-image: url('https://www.niklas-engelhardt.de/join/assets/img/contacts/call-contact-input.svg');
     background-position: 90%;
     background-repeat: no-repeat;
     background-size: 24px;

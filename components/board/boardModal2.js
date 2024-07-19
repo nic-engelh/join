@@ -10,9 +10,9 @@ function transformSubtaskButtonModal(id) {
     <div class="add_task_inputs_modal">
         <input onkeyup="handleKeyUp(event)" id="subtask_input_modal" class="subtask_input" placeholder="Add new Subtask">
         <div class="delete_and_check">
-            <img onclick="revertBackToButtonModal('${id}')" class="exit" id="exit" src="/assets/img/addTask/subtask_delete.png">
+            <img onclick="revertBackToButtonModal('${id}')" class="exit" id="exit" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_delete.png">
             <img src="/assets/img/addTask/subtask_divide.png">
-            <img onclick="addNewSubtaskToListModal('${id}')" class="tick" id="tick" src="/assets/img/addTask/subtask_check.png">
+            <img onclick="addNewSubtaskToListModal('${id}')" class="tick" id="tick" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_check.png">
         </div>
     </div>
     `;
@@ -30,7 +30,7 @@ function revertBackToButtonModal(id) {
 
     subtaskButton.innerHTML = `
     <button class="add_task_inputs_modal" id="task_subtask_button_modal" onclick="transformSubtaskButtonModal('${id}')" type="text">
-    <span>Add new Subtask</span><img src="/assets/img/addTask/add_subtask.png" alt="">
+    <span>Add new Subtask</span><img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/add_subtask.png" alt="">
     </button>
     `;
 }
@@ -66,9 +66,9 @@ function modalTaskAddSubtasks(id) {
             <input readonly id="readonlyInputModal${i}" value="${addedTask}"
                 class="input_edit_subtask"></input>
             <div id="editAndDeleteModal${i}" class="edit_and_delete">
-                <img id="editModalSubtask${i}" onclick="editModalSubtask(${i}, '${id}')" src="/assets/img/addTask/edit.png">
+                <img id="editModalSubtask${i}" onclick="editModalSubtask(${i}, '${id}')" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/edit.png">
                 <img src="/assets/img/addTask/subtask_divide.png">
-                <img id="deleteModalSubtask${i}" onclick="modalDeleteSubtask(${i}, '${id}')" class="delete" src="/assets/img/addTask/delete.png"
+                <img id="deleteModalSubtask${i}" onclick="modalDeleteSubtask(${i}, '${id}')" class="delete" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/delete.png"
             </div>
         </div>
     </li>`;
@@ -100,7 +100,7 @@ function editModalSubtask(i, id) {
         <img id="delete${i}" onclick="deleteSubtaskItem(${i})" class="delete" src="/assets/img/addTask/delete.png"
         <img src="/assets/img/addTask/subtask_divide.png">
         <img src="/assets/img/addTask/subtask_divide.png">
-        <img onclick="acceptChangesModal(${i}, '${id}')" src="/assets/img/addTask/subtask_check.png">
+        <img onclick="acceptChangesModal(${i}, '${id}')" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_check.png">
     `;
     const changeBackground = document.getElementById('new_subtask_list')
     changeBackground.classList.add('edit_subtask_list');
