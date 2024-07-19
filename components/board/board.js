@@ -179,17 +179,17 @@ function generatePriority(task) {
 
     if (task.prio == 'urgent') {
         imagePrio.innerHTML = `
-        <img src="/assets/img/addTask/prio_high.png" alt="prio high">
+        <img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_high.png" alt="prio high">
         `}
 
     if (task.prio == 'medium') {
         imagePrio.innerHTML = `
-        <img src="/assets/img/addTask/prio_medium.png" alt="prio medium">
+        <img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_medium.png" alt="prio medium">
     `}
 
     if (task.prio == 'low') {
         imagePrio.innerHTML = `
-        <img src="/assets/img/addTask/prio_low.png" alt="prio low">
+        <img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/prio_low.png" alt="prio low">
     `}
 
 }
@@ -246,7 +246,7 @@ function styleCreateTaskModal(boardFieldStatus) {
     document.getElementById("tasks_line").style.display = "none";
     let newImg = document.createElement("img");
     newImg.id = "addTaskModalClose";
-    newImg.src = "/assets/img/board/modal_close.png";
+    newImg.src = "https://www.niklas-engelhardt.de/join/assets/img/board/modal_close.png";
     let newDiv = document.createElement("div");
     newDiv.id = "addTaskModalLine";
     let container = document.getElementById("board_add_task");
@@ -268,7 +268,7 @@ function closeCreateTaskModal() {
 
 async function resetCreateTaskModal() {
     document.getElementById("body").innerHTML += `
-    <div id="w3AddTask" w3-include-html="/components/tasks/tasksInclude.html"></div>`;
+    <div id="w3AddTask" w3-include-html="https://www.niklas-engelhardt.de/join/components/tasks/tasksInclude.html"></div>`;
     await includeHTML();
     await updateBoardHTML();
     await openSection('sectionBoard');
@@ -425,7 +425,7 @@ function generateTodoHTML(task) {
         <div draggable="true" ondragstart="startDragging('${task.id}')" class="taskToDo">
             <div class="userHeadline">${task.category}</div>
             <div  class="board_dropDown_position">
-            <img onclick="event.stopPropagation(); openDropDownBoard('${task.id}')" id=board_dropDown class="board_dropDown" src="assets/img/dropDown.png" alt="">
+            <img onclick="event.stopPropagation(); openDropDownBoard('${task.id}')" id=board_dropDown class="board_dropDown" src="https://www.niklas-engelhardt.de/join/assets/img/dropDown.png" alt="">
             <dialog id="board_modal_container${task.id}" class="visually-hidden board_popup">
             <div id="board_modal_category">
                 <h3>Move to</h3>

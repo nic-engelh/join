@@ -35,7 +35,7 @@ async function loadBoardModal(id, title, description, date, category) {
     document.getElementById("board_modal_date").innerHTML = date;
     document.getElementById("board_modal_edit_task_button").innerHTML = `
         <div onclick="openBoardModalEditTask('${id}')" class="task_card_button">
-            <img src="/assets/img/board/edit.png" alt="edit">
+            <img src="https://www.niklas-engelhardt.de/join/assets/img/board/edit.png" alt="edit">
                 <span class="task_category_font">Edit</span>
         </div>`;
     document.getElementById("subtask_button_input_modal").innerHTML = `
@@ -96,12 +96,12 @@ function finishSubtasks(id, i) {
     let img = document.getElementById(`board_modal_subtask_status_${i}`);
 
     if (img.src.endsWith('/assets/img/board/check_empty.png')) {
-        img.src = '/assets/img/board/check_checked.png';
+        img.src = 'https://www.niklas-engelhardt.de/join/assets/img/board/check_checked.png';
         img.classList.add("board_modal_subtask_status_img");
         USERS[ACTIVEUSERKEY].tasks[id].subtasks.subtaskStatus[i] = 1;
     }
     else if (img.src.endsWith('/assets/img/board/check_checked.png')) {
-        img.src = '/assets/img/board/check_empty.png';
+        img.src = 'https://www.niklas-engelhardt.de/join/assets/img/board/check_empty.png';
         img.classList.remove("board_modal_subtask_status_img");
         USERS[ACTIVEUSERKEY].tasks[id].subtasks.subtaskStatus[i] = 0;
     }

@@ -11,7 +11,7 @@ function transformSubtaskButtonModal(id) {
         <input onkeyup="handleKeyUp(event)" id="subtask_input_modal" class="subtask_input" placeholder="Add new Subtask">
         <div class="delete_and_check">
             <img onclick="revertBackToButtonModal('${id}')" class="exit" id="exit" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_delete.png">
-            <img src="/assets/img/addTask/subtask_divide.png">
+            <img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_divide.png">
             <img onclick="addNewSubtaskToListModal('${id}')" class="tick" id="tick" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_check.png">
         </div>
     </div>
@@ -67,7 +67,7 @@ function modalTaskAddSubtasks(id) {
                 class="input_edit_subtask"></input>
             <div id="editAndDeleteModal${i}" class="edit_and_delete">
                 <img id="editModalSubtask${i}" onclick="editModalSubtask(${i}, '${id}')" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/edit.png">
-                <img src="/assets/img/addTask/subtask_divide.png">
+                <img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_divide.png">
                 <img id="deleteModalSubtask${i}" onclick="modalDeleteSubtask(${i}, '${id}')" class="delete" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/delete.png"
             </div>
         </div>
@@ -97,9 +97,9 @@ function editModalSubtask(i, id) {
     const editIcons = document.getElementById(`editAndDeleteModal${i}`);
     editIcons.innerHTML = "";
     editIcons.innerHTML = `
-        <img id="delete${i}" onclick="deleteSubtaskItem(${i})" class="delete" src="/assets/img/addTask/delete.png"
-        <img src="/assets/img/addTask/subtask_divide.png">
-        <img src="/assets/img/addTask/subtask_divide.png">
+        <img id="delete${i}" onclick="deleteSubtaskItem(${i})" class="delete" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/delete.png"
+        <img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_divide.png">
+        <img src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_divide.png">
         <img onclick="acceptChangesModal(${i}, '${id}')" src="https://www.niklas-engelhardt.de/join/assets/img/addTask/subtask_check.png">
     `;
     const changeBackground = document.getElementById('new_subtask_list')

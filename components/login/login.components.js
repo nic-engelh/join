@@ -146,7 +146,7 @@ function checkPasswordLogin(password) {
  * from login to register html
  */
 function signUp() {
-     window.location.href = './register.html';
+     window.location.href = 'https://www.niklas-engelhardt.de/join/components/login/register.html';
 }
 
 /**
